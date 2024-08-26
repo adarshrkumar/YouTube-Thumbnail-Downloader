@@ -1,0 +1,85 @@
+:root {
+  --orig-bg-color: #0078d7;
+  --shadow-size: 25px;
+}
+
+html {
+  padding: var(--shadow-size);
+  height: calc(100% - var(--shadow-size)*2);
+  background-color: white;
+}
+
+body {
+  --shadow-color: var(--orig-bg-color);
+  
+  box-sizing: border-box;
+  margin: 0;
+  padding: var(--shadow-size);
+  
+  min-height: 100%;
+
+  background-color: var(--orig-bg-color);
+  border-radius: 25px;
+
+  box-shadow: var(--shadow-color, var(--orig-bg-color)) 0px 0px calc(var(--shadow-size) - 0px) 0px;
+  
+  display: flex;
+  flex-direction: column;
+  gap: var(--shadow-size);
+  transition: 0.25s ease-in-out;
+}
+
+body:hover {
+  border-radius: 12.5px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  gap: 12.5px;
+}
+
+header > * {
+  border-radius: 25px;
+  transition: 0.25s ease-in-out;
+}
+
+header > *:hover {
+  border-radius: 12.5px;
+}
+
+header > input {
+  height: 31.8px;
+  width: 254.4px;
+  padding-inline: 10px;
+}
+
+header > button {
+  cursor: pointer;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+main > a.link {
+  flex: 1;
+  margin-inline: auto;
+  max-height: 100%;
+  max-width: 100%;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 25px;
+  transition: 0.25s ease-in-out;
+  overflow: hidden;
+}
+main > a.link:hover {
+  border-radius: 12.5px;
+}
+
+
+main img.img {
+  max-width: 100%;
+  max-height: 100%;
+}
